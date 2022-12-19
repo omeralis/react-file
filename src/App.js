@@ -10,14 +10,14 @@ function App() {
   const [name, setName] = useState();
   const [cv, setCV] = useState(null);
 
-  function handleChange(event) {
-    setCV(event.target.value);
-    console.log(event)
-  }
-  // const handleChange = e => {
-  //   console.log(e.target.files[0]);
-  //   setCV(e.target.files[0]);
-  // };
+  // function handleChange(event) {
+  //   setCV(event.target.value);
+  //   console.log(event)
+  // }
+  const handleChange = e => {
+    console.log(e.target.files[0]);
+    setCV(e.target.files[0]);
+  };
   function handleSubmit(event) {
     console.log(cv)
     event.preventDefault();
@@ -81,7 +81,7 @@ function App() {
           <input
             type="file"
             className="form-control m-2"
-            value={cv}
+            // value={cv}
             onChange={handleChange}
             // onChange={(e) => setCV(e.target.value)}
             required
